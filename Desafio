@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class CalculoExpressao {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor de 'a': ");
+        double a = scanner.nextDouble();
+
+        System.out.print("Digite o valor de 'b': ");
+        double b = scanner.nextDouble();
+
+        double resultado = calcularOperacao(a, b);
+
+        System.out.println("O resultado da expressão x = a^2 + 2ab + b^2 é: " + resultado);
+
+        scanner.close();
+    }
+
+    public static double calcularOperacao(double a, double b) {
+        return Math.pow(a, 2) + 2 * a * b + Math.pow(b, 2);
+    }
+}
